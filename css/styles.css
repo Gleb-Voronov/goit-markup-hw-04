@@ -323,7 +323,7 @@ section.hero {
     justify-content: center;
     align-items: center;
 }
-.icons-link:focus
+.icons-link:focus,
 .icons-link:hover {
     background-color: #404bbf;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -351,6 +351,7 @@ section.hero {
 }
 .portfolio-list-item {
     width: calc((100% - 2 * 24px) / 3);
+
     position: relative;
 }
 .image-portfolio {
@@ -365,20 +366,27 @@ section.hero {
     letter-spacing: 0.02em;
     color: #f4f4fd;
     background-color: #4d5ae5;
+    padding-top: 40px;
+    padding-left: 32px;
+    padding-right: 32px;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    border-bottom: 1px solid #e7e9fc;
+    border-left: 1px solid #e7e9fc;
+    border-right: 1px solid #e7e9fc;
     position: absolute;
     bottom: 0;
     left: 0;
-    transform: translateY(100%)
+    transform: translateY(100%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1;
-    padding-top: 40px 32px;
+    width: 100%;
+    height: 100%;
 }
 
 .overlay-text:hover,
 .overlay-text:focus {
-transform: translateY(0)
+    transform: translateY(0);
 }
-
 
 .container-item-portfolio {
     padding: 32px 16px;
@@ -392,18 +400,19 @@ transform: translateY(0)
 .footer-page {
     padding: 100px 0;
     background-color: #2e2f42;
+    max-width: 1558px;
     margin-left: auto;
     margin-right: auto;
-    max-width: 1440px;
 }
 
 .footers-container {
-    padding-left: 156px;
     display: flex;
-    align-items: center;
+    align-items: baseline;
+    justify-content: space-between;
 }
 
 .footer-container {
+    /*padding-left: 156px;*/
     margin-right: 120px;
 }
 
@@ -414,8 +423,7 @@ footer .logo {
 
 footer .logo-style {
     color: #f4f4fd;
-    /*margin-bottom: 16px;*/
-}
+ }
 
 .footer-text {
     font-weight: 400;
@@ -429,8 +437,6 @@ footer .logo-style {
 .social-container {
     padding-top: 100px;
     padding-bottom: 132px;
-    align-items: center;
-    justify-content: center;
 }
 
 .social-text {
@@ -440,8 +446,8 @@ footer .logo-style {
     letter-spacing: 0.02em;
     color: #fff;
     margin-bottom: 16px;
-    /*display: flex;
-    justify-content: flex-start;   */
+    display: flex;
+    justify-content: flex-start;  
 }
 
 .footer-list {
@@ -458,6 +464,7 @@ footer .logo-style {
     align-items: center;
     display: flex;
 }
+
 .footer-item-link:hover {
     background-color: #31d0aa;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -467,4 +474,5 @@ footer .logo-style {
     height: 24px;*/
     fill: #FFFFFF;
 }
+
 /* #endregion */
