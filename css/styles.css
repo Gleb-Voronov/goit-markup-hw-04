@@ -122,6 +122,7 @@ button {
     align-items: center;
     gap: 40px;
 }
+
 .addr-item-link {
     display: block;
     padding: 24px 0;
@@ -164,6 +165,7 @@ section.hero {
 .hero-container {
    align-items: center;
 }
+
 .hero-title {
     font-weight: 700;
     font-size: 56px;
@@ -192,13 +194,12 @@ section.hero {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    
 }
 
 .hero-btn:hover,
 .hero-btn:focus {
-    background: #404bbf;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: #404bbf;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } 
 /* #endregion */
 
@@ -222,7 +223,7 @@ section.hero {
 .benef-list {
     display: flex;
     gap: 24px;
-    background-color: #FFFFFF
+    background-color: #FFFFFF;
 }
 
 .benef-list-item {
@@ -241,8 +242,6 @@ section.hero {
     margin-bottom: 8px;
 }
 .icons-benefits {
-    width: 64px;
-    height: 64px;
     display: flex;
     justify-content: center;
 }
@@ -294,14 +293,20 @@ section.hero {
     background-color: #FFFFFF;
     border-radius: 0 0 4px 4px;
     width: calc((100% - 3 * 24px) / 4);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .team-list-item:hover
 .team-list-item:focus {
-    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    /*box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);*/
 }
 
-  
+.container-item {
+    padding: 32px 0;
+}
+
 .icons-list {
     display: flex;
     justify-content: center;
@@ -313,32 +318,43 @@ section.hero {
     height: 40px;
 }
 
-
 .icons-link {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
-    background-color: #4d5ae5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
+
 .icons-link:focus,
 .icons-link:hover {
     background-color: #404bbf;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.icons-team {
-    /*width: 16px;
-    height: 16px;*/
+.svg {
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    fill: #FFFFFF;
 }
+
+.svg:focus,
+.svg:hover {
+    background-color: #404bbf;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icons-team {
+    justify-content: center;
+    fill: #f4f4fd;
+}
+
 .container-item {
     text-align: center;
     padding: 32px 0;
     padding-bottom: 8px; 
 }
+
 .section-portfolio {
     padding: 120px 0;
 }
@@ -351,14 +367,24 @@ section.hero {
 }
 .portfolio-list-item {
     width: calc((100% - 2 * 24px) / 3);
-
     position: relative;
 }
+
+.portfolio-list-item:hover,
+.portfolio-list-item:focus {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(0%);
+}
+
 .image-portfolio {
     position: relative;
     display: block;
     overflow: hidden;
 }
+
 .overlay-text {
     font-weight: 400;
     font-size: 16px;
@@ -366,9 +392,7 @@ section.hero {
     letter-spacing: 0.02em;
     color: #f4f4fd;
     background-color: #4d5ae5;
-    padding-top: 40px;
-    padding-left: 32px;
-    padding-right: 32px;
+    padding: 40px 32px;
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
     border-bottom: 1px solid #e7e9fc;
     border-left: 1px solid #e7e9fc;
@@ -377,16 +401,16 @@ section.hero {
     bottom: 0;
     left: 0;
     transform: translateY(100%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1;
     width: 100%;
     height: 100%;
 }
 
-.overlay-text:hover,
+/*.overlay-text:hover,
 .overlay-text:focus {
     transform: translateY(0);
-}
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}*/
 
 .container-item-portfolio {
     padding: 32px 16px;
@@ -400,7 +424,7 @@ section.hero {
 .footer-page {
     padding: 100px 0;
     background-color: #2e2f42;
-    max-width: 1558px;
+    /*max-width: 1558px;*/
     margin-left: auto;
     margin-right: auto;
 }
@@ -408,7 +432,6 @@ section.hero {
 .footers-container {
     display: flex;
     align-items: baseline;
-    justify-content: space-between;
 }
 
 .footer-container {
@@ -470,8 +493,6 @@ footer .logo-style {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icons-footer {
-    /*width: 24px;
-    height: 24px;*/
     fill: #FFFFFF;
 }
 
